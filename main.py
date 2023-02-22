@@ -26,14 +26,16 @@ def home():
         # Perform search using search_term
         print(search_term)
         url = "https://dictionary-by-api-ninjas.p.rapidapi.com/v1/dictionary"
+        key = os.getenv('X-RapidAPI-Key')
+        Host = os.getenv('X-RapidAPI-Host')
 
         querystring = {
             "word": search_term
         }
 
         headers = {
-            "X-RapidAPI-Key": os.environ["X-RapidAPI-Key"],
-            "X-RapidAPI-Host": os.environ["X-RapidAPI-Host"]
+            "X-RapidAPI-Key": key,
+            "X-RapidAPI-Host": Host
         }
         responses = requests.get(url, headers=headers, params=querystring)
 
