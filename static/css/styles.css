@@ -1,0 +1,32 @@
+body {
+    background-color: #212529;
+    padding: 0 3%;
+}
+
+.navbar-brand {
+    color: white;
+    font-weight: 600;
+}
+
+.navbar-collapse {
+    color: white;
+}
+
+.home {
+    border: 5px;
+    border-radius: 10px;
+}
+
+.nav-header {
+    color: white;
+}
+
+.nav-header:hover {
+    color: blue;
+}
+
+.bi-volume-up {
+    color: white;
+    background-color: black;
+  }
+
