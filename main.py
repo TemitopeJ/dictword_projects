@@ -39,8 +39,9 @@ def home():
         }
         responses = requests.get(url, headers=headers, params=querystring)
 
-        fetch_word = responses.json()["definition"]
-        result = fetch_word.replace("2.", "\n2.").replace("3.", "\n3.")
+        data = responses.json()
+        fetch_word = data.get('definition')
+        result = fetch_word.replace("2.", "\n2.")
         header = f"Your word is: {search_term}"
     return render_template("index.html", form=form, result=result, header=header)
 
