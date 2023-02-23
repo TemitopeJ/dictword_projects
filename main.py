@@ -33,14 +33,14 @@ def home():
             "word": search_term
         }
 
-        headers = {
+        header = {
             "X-RapidAPI-Key": key,
             "X-RapidAPI-Host": Host
         }
-        responses = requests.get(url, headers=headers, params=querystring)
+        responses = requests.get(url, headers=header, params=querystring)
 
         data = responses.json()
-        result = data.get('definition')
+        result = data.get('definition', 'Definition not found')
 
         header = f"Your word is: {search_term}"
     return render_template("index.html", form=form, result=result, header=header)
