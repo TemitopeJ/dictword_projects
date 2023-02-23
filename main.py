@@ -30,7 +30,7 @@ def home():
         Host = os.getenv('X-RapidAPI-Host')
 
         querystring = {
-            "word": search_term
+            "term": search_term
         }
 
         header = {
@@ -40,7 +40,7 @@ def home():
         responses = requests.get(url, headers=header, params=querystring)
 
         data = responses.json()
-        result = data.get('definition', 'Definition not found')
+        result = data['list'][0]['definition']
 
         header = f"Your word is: {search_term}"
     return render_template("index.html", form=form, result=result, header=header)
