@@ -50,21 +50,19 @@
 
                     <br>
                   <div class="col-lg-6 mx-auto">
-                    {% if result %}
                       <p>{{ result }}</p>
-                    {% else %}
-                      <div class="col-lg-6 mx-auto">
-                        <p class="fs-5 mb-4">Enter the word you want to search in the bar above, then click Go. The search result would appear here.</p>
-                      </div>
-                    {% endif %}
+
                   </div>
                 {% else %}
                   <div class="py-5">
 
                    <h1 class="display-5 fw-bold text-white">Your search word appears here!</h1>
-
+                      <div class="col-lg-6 mx-auto">
+                        <p class="fs-5 mb-4">Enter the word you want to search in the bar above, then click Go. The search result would appear here.</p>
+                      </div>
                   </div>
                 {% endif %}
+
 
 
 
