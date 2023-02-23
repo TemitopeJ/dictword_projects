@@ -25,7 +25,7 @@ def home():
         search_term = form.search.data
         # Perform search using search_term
         print(search_term)
-        url = "https://dictionary-by-api-ninjas.p.rapidapi.com/v1/dictionary"
+        url = os.getenv('URL')
         key = os.getenv('X-RapidAPI-Key')
         Host = os.getenv('X-RapidAPI-Host')
 
